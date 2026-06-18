@@ -206,8 +206,16 @@ section.block{padding:90px 0}
 .final p{color:var(--muted);font-size:18px;margin-bottom:30px}
 
 /* ---------- FOOTER ---------- */
-footer{border-top:1px solid var(--line);padding:40px 0;background:var(--bg-2)}
-.foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;color:var(--muted);font-size:13px}
+footer{border-top:1px solid var(--line);padding:56px 0 30px;background:var(--bg-2)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;color:var(--muted);font-size:14px}
+.foot-grid h5{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.foot-grid p{margin-bottom:8px}
+.foot-grid p span{color:var(--txt);font-weight:600;margin-left:4px}
+.foot-grid a{transition:.2s}
+.foot-grid a:hover{color:var(--gold)}
+.foot-addr{max-width:240px}
+.foot-base{margin-top:36px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted-2);font-size:12px}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr;gap:26px}}
 
 /* reveal */
 .reveal{opacity:0;transform:translateY(24px);transition:.7s cubic-bezier(.2,.7,.2,1)}
@@ -263,7 +271,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;background:var(--bg-2)}
     </div>
     <div class="hero-card">
       <div class="hero-photo">
-        <div class="float-stat fs-1"><div class="n">24/7</div><div class="l">Gym Access</div></div>
+        <div class="float-stat fs-1"><div class="n">7 Days</div><div class="l">Open Weekly</div></div>
         <div class="float-stat fs-2"><div class="n">&lt;2 min</div><div class="l">To Sign Up</div></div>
       </div>
     </div>
@@ -305,7 +313,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;background:var(--bg-2)}
           <div class="signup-line">Signup: <b>$113.00</b> + last month upfront</div>
           <ul>
             <li><span class="ic">✓</span> Lowest intro month rate</li>
-            <li><span class="ic">✓</span> Full 24/7 gym access</li>
+            <li><span class="ic">✓</span> Full gym access, 7 days a week</li>
             <li><span class="ic">✓</span> Cancel after 2 months, no penalty</li>
           </ul>
           <button class="btn btn-ghost select-plan">Choose 2-Month</button>
@@ -319,7 +327,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;background:var(--bg-2)}
           <div class="signup-line">Signup: <b>$56.50</b> + last month upfront</div>
           <ul>
             <li><span class="ic">✓</span> Half-price signup fee</li>
-            <li><span class="ic">✓</span> Full 24/7 gym access</li>
+            <li><span class="ic">✓</span> Full gym access, 7 days a week</li>
             <li><span class="ic">✓</span> Free fitness assessment included</li>
             <li><span class="ic">✓</span> Best balance of price &amp; flexibility</li>
           </ul>
@@ -334,7 +342,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;background:var(--bg-2)}
           <div class="signup-line"><b>$0 sign-up</b> — start with zero upfront fee</div>
           <ul>
             <li><span class="ic">✓</span> Nothing to pay to join</li>
-            <li><span class="ic">✓</span> Full 24/7 gym access</li>
+            <li><span class="ic">✓</span> Full gym access, 7 days a week</li>
             <li><span class="ic">✓</span> Free fitness assessment included</li>
           </ul>
           <button class="btn btn-ghost select-plan">Choose 4-Month</button>
@@ -371,7 +379,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;background:var(--bg-2)}
     </div>
     <div class="feat-grid">
       <div class="feat reveal"><div class="fic">🏋️</div><h3>Premium Equipment</h3><p>Hammer Strength, free weights, and a full functional training rig.</p></div>
-      <div class="feat reveal"><div class="fic">🕛</div><h3>24/7 Access</h3><p>Train on your schedule with secure fob entry, day or night.</p></div>
+      <div class="feat reveal"><div class="fic">🕛</div><h3>Open 7 Days</h3><p>Mon–Thu 6am–11pm · Fri 6am–10pm · Sat–Sun 8am–9pm. Plenty of hours to fit your schedule.</p></div>
       <div class="feat reveal"><div class="fic">🧘</div><h3>Classes Included</h3><p>HIIT, strength, mobility and spin — all on the member app.</p></div>
       <div class="feat reveal"><div class="fic">♨️</div><h3>Recovery Zone</h3><p>Sauna, stretching space and recovery tools to keep you going.</p></div>
     </div>
@@ -445,7 +453,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;background:var(--bg-2)}
       </div>
       <div class="testi reveal">
         <div class="stars">★★★★★</div>
-        <p>"Best equipped gym in the area and it's open 24/7. The free assessment actually helped me set a real plan."</p>
+        <p>"Best equipped gym in the area with great hours — open early and late 7 days a week. The free assessment actually helped me set a real plan."</p>
         <div class="who"><div class="av">J</div><div><div class="nm">Jordan K.</div><div class="rl">Lost 14kg in 5 months</div></div></div>
       </div>
       <div class="testi reveal">
@@ -485,10 +493,25 @@ footer{border-top:1px solid var(--line);padding:40px 0;background:var(--bg-2)}
 
 <!-- FOOTER -->
 <footer>
-  <div class="wrap foot">
-    <img src="assets/empire-logo-full.png" alt="Empire Fitness" style="height:60px;width:auto" />
-    <div>© Empire Fitness Global. Redesign proposal mockup.</div>
+  <div class="wrap foot-grid">
+    <div>
+      <img src="assets/empire-logo-full.png" alt="Empire Fitness" style="height:64px;width:auto;margin-bottom:14px" />
+      <p class="foot-addr">11160 Yonge St B1, Richmond Hill, ON L4S 1H5</p>
+    </div>
+    <div>
+      <h5>Opening Hours</h5>
+      <p>Mon – Thu &nbsp;<span>6:00am – 11:00pm</span></p>
+      <p>Friday &nbsp;<span>6:00am – 10:00pm</span></p>
+      <p>Sat – Sun &nbsp;<span>8:00am – 9:00pm</span></p>
+    </div>
+    <div>
+      <h5>Get in Touch</h5>
+      <p><a href="tel:+19057373999">(905) 737-3999</a></p>
+      <p><a href="https://instagram.com/empire_fitness_richmondhill" target="_blank" rel="noopener">@empire_fitness_richmondhill</a></p>
+      <p><a href="https://empirefitnessglobal.com" target="_blank" rel="noopener">empirefitnessglobal.com</a></p>
+    </div>
   </div>
+  <div class="wrap foot-base">© Empire Fitness Global · Signup page redesign proposal</div>
 </footer>
 
 <!-- PROPOSAL NOTE -->
